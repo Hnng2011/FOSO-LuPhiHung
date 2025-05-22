@@ -8,8 +8,10 @@ const getLabelFromPathname = (pathname: string) => {
   switch (lastPathname) {
     case "main":
       return "Dashboard";
+    case "setting":
+      return "Settings";
     default:
-      return "lastPathname";
+      return lastPathname;
   }
 };
 

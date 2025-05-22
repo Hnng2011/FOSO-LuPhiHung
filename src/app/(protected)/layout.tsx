@@ -5,15 +5,20 @@ import { ReactElement, useEffect } from "react";
 
 export default function Layout({ children }: { children: ReactElement }) {
   //TODO: Check authentication
-  const setUserInfo = useUserInfo((state) => state.setUserInfo);
+  const { user, setUserInfo } = useUserInfo((state) => state);
 
   useEffect(() => {
-    setTimeout(
-      () =>
-        setUserInfo({ avatar: "", name: "Test User", email: "test@gmail.com" }),
-      2000
-    );
-  }, []);
+    if (!user)
+      setTimeout(
+        () =>
+          setUserInfo({
+            avatar: "",
+            name: "Test User",
+            email: "test@gmail.com",
+          }),
+        2000
+      );
+  }, [user]);
 
   return <>{children}</>;
 }

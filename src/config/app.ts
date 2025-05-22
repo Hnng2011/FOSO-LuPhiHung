@@ -1,4 +1,4 @@
-import { Home, Calendar, Box } from "lucide-react";
+import { Home, Calendar, Box, Settings } from "lucide-react";
 import routePath from "./router-path";
 
 export const APP_CONFIG = {
@@ -23,5 +23,13 @@ export const APP_CONFIG = {
       icon: Calendar,
     },
     //TODO: Add more sidebar route if need
+  ],
+
+  footerRoute: [
+    {
+      title: "Settings",
+      url: routePath.dashboard.setting,
+      icon: Settings,
+    },
   ],
 };

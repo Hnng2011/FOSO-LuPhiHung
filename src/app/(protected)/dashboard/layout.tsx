@@ -26,13 +26,15 @@ function DashboardProvider({ children }: { children: ReactElement }) {
 
 export default function Layout({ children }: { children: ReactElement }) {
   const user = useUserInfo((state) => state.user);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!!user);
   const router = useRouter();
 
   useEffect(() => {
     if (user) {
       setLoading(false);
       router.replace(routePath.dashboard.main);
+    } else {
+      setLoading(true);
     }
   }, [user]);
 

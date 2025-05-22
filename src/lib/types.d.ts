@@ -6,7 +6,7 @@ type UserInfo = {
 
 interface UserStore {
   user?: UserInfo;
-  setUserInfo: (info: UserInfo) => void;
+  setUserInfo: (info: UserInfo | undefined) => void;
 }
 
 type MainDashboardInfo = {
