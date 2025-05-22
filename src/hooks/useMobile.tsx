@@ -1,35 +1,19 @@
-import { useWindowSize } from "@uidotdev/usehooks";
-import { useEffect, useState, useCallback } from "react";
+import { useState, useEffect } from "react";
 
-export const useResponsive = () => {
-  const { width } = useWindowSize();
-  const [breakpoints, setBreakpoints] = useState({
-    isMobile: false,
-    isDesktop: false,
-  });
+const MOBILE_BREAKPOINT = 768;
 
-  const updateBreakpoints = useCallback(() => {
-    if (width === null || width === undefined) {
-      // Handle SSR or initial render when width is not available
-      return {
-        isMobile: false,
-        isDesktop: false,
-      };
-    }
-
-    return {
-      isMobile: width < 768,
-      isDesktop: width >= 768,
-    };
-  }, [width]);
+export function useMobile() {
+  const [isMobile, setIsMobile] = useState<boolean | undefined>(undefined);
 
   useEffect(() => {
-    const newBreakpoints = updateBreakpoints();
-    setBreakpoints(newBreakpoints);
-  }, [width, updateBreakpoints]);
+    const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`);
+    const onChange = () => {
+      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    };
+    mql.addEventListener("change", onChange);
+    setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    return () => mql.removeEventListener("change", onChange);
+  }, []);
 
-  return {
-    ...breakpoints,
-    isContentLoaded: width !== null && width !== undefined,
-  };
-};
+  return !!isMobile;
+}

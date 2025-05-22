@@ -28,7 +28,15 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -54,7 +62,15 @@
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -64,5 +80,41 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Primary Heading (H1) */
+  .h1 {
+    @apply text-2xl font-bold leading-tight;
+    @apply md:text-3xl lg:text-4xl;
+  }
+
+  /* Secondary Heading (H2) */
+  .h2 {
+    @apply text-xl font-semibold leading-snug;
+    @apply md:text-2xl lg:text-3xl;
+  }
+
+  /* Tertiary Heading (H3) */
+  .h3 {
+    @apply text-lg font-medium leading-normal;
+    @apply md:text-lg lg:text-xl;
+  }
+
+  /* Body Text */
+  .body {
+    @apply text-base font-normal leading-normal;
+    @apply md:text-lg lg:text-xl;
+  }
+
+  /* Small Text (S1) */
+  .s1 {
+    @apply text-sm font-normal leading-relaxed;
+    @apply md:text-base lg:text-lg;
+  }
+
+  /* Small Highlighted Text (S2) */
+  .s2 {
+    @apply text-sm font-semibold leading-relaxed uppercase;
+    @apply md:text-base lg:text-lg;
   }
 }

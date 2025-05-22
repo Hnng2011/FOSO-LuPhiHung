@@ -1,10 +1,9 @@
-import { Card } from "@mantine/core";
-import Image from "next/image";
+import Loading from "@/components/ui/spinner";
 
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-3xl font-bold">Hello world</h1>
+    <main className="w-screen h-screen flex items-center justify-center">
+      {/* TODO: Landing or Intro page */}
     </main>
   );
 }
