@@ -10,6 +10,10 @@ const getLabelFromPathname = (pathname: string) => {
       return "Dashboard";
     case "setting":
       return "Settings";
+    case "profile":
+      return "Profile";
+    case "edit":
+      return "Edit Profile";
     default:
       return lastPathname;
   }

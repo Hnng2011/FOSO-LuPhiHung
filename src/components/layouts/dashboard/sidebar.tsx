@@ -45,10 +45,10 @@ export function AppSideBar() {
               {APP_CONFIG.sidebarRoute.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <div onClick={() => router.push(item.url)}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </div>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

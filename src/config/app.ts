@@ -28,7 +28,7 @@ export const APP_CONFIG = {
   footerRoute: [
     {
       title: "Settings",
-      url: routePath.dashboard.setting,
+      url: routePath.dashboard.setting.main,
       icon: Settings,
     },
   ],

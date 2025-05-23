@@ -6,14 +6,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface ActionCardProps {
+  children?: ReactElement | ReactElement[];
   fit?: boolean;
   action?: { label: string; func: () => void };
-  title: string;
-  content: string | ReactNode;
+  title?: string;
+  content?: string | ReactNode;
   classNames?: {
     container?: string;
     header?: string;
@@ -28,6 +29,7 @@ export function ActionCard({
   title,
   content,
   classNames,
+  children,
 }: ActionCardProps) {
   return (
     <Card
@@ -37,20 +39,29 @@ export function ActionCard({
         classNames?.container
       )}
     >
-      <div className="w-full">
-        <CardHeader className={classNames?.header}>
-          <CardTitle className={cn("h3", classNames?.title)}>{title}</CardTitle>
-        </CardHeader>
-        <CardContent
-          className={cn("flex-wrap break-words", classNames?.content)}
-        >
-          {content}
-        </CardContent>
+      <div className="w-full p-4 space-y-6">
+        {title && (
+          <CardHeader className={cn("p-0", classNames?.header)}>
+            <CardTitle className={cn("h3", classNames?.title)}>
+              {title}
+            </CardTitle>
+          </CardHeader>
+        )}
+
+        {(children || content) && (
+          <CardContent
+            className={cn("flex-wrap break-words p-0", classNames?.content)}
+          >
+            {children || content}
+          </CardContent>
+        )}
       </div>
 
-      <CardFooter className="p-6">
-        {action && <Button onClick={action?.func}>{action?.label}</Button>}
-      </CardFooter>
+      {action && (
+        <CardFooter className="p-4">
+          <Button onClick={action?.func}>{action?.label}</Button>
+        </CardFooter>
+      )}
     </Card>
   );
 }

@@ -70,6 +70,44 @@ const config: Config = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+
+        //Custom color
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          hover: "hsl(var(--success-hover))",
+          press: "hsl(var(--success-press))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          hover: "hsl(var(--warning-hover))",
+          press: "hsl(var(--warning-press))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
+        danger: {
+          DEFAULT: "hsl(var(--danger))",
+          hover: "hsl(var(--danger-hover))",
+          press: "hsl(var(--danger-press))",
+          foreground: "hsl(var(--danger-foreground))",
+        },
+        info: {
+          DEFAULT: "hsl(var(--info))",
+          hover: "hsl(var(--info-hover))",
+          press: "hsl(var(--info-press))",
+          foreground: "hsl(var(--info-foreground))",
+        },
+        neutral: {
+          DEFAULT: "hsl(var(--neutral))",
+          hover: "hsl(var(--neutral-hover))",
+          press: "hsl(var(--neutral-press))",
+          foreground: "hsl(var(--neutral-foreground))",
+        },
+        surface: {
+          DEFAULT: "hsl(var(--surface))",
+          hover: "hsl(var(--surface-hover))",
+          press: "hsl(var(--surface-press))",
+          foreground: "hsl(var(--surface-foreground))",
+        },
       },
     },
   },

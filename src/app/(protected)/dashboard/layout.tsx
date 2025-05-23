@@ -16,9 +16,9 @@ function DashboardProvider({ children }: { children: ReactElement }) {
     <SidebarProvider className="flex w-full h-full p-2 box-border">
       <AppSideBar />
 
-      <div className="flex-col w-full p-2 rounded-lg">
+      <div className="flex-col w-full p-2 rounded-lg space-y-6">
         <Header />
-        {children}
+        <div>{children}</div>
       </div>
     </SidebarProvider>
   );

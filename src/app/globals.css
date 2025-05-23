@@ -37,6 +37,37 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Brand color */
+    --success: 142 71% 45%;
+    --success-hover: 142 71% 35%;
+    --success-press: 142 71% 25%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 43 96% 56%;
+    --warning-hover: 43 96% 46%;
+    --warning-press: 43 96% 36%;
+    --warning-foreground: 0 0% 0%;
+
+    --danger: 0 84% 60%;
+    --danger-hover: 0 84% 50%;
+    --danger-press: 0 84% 40%;
+    --danger-foreground: 0 0% 100%;
+
+    --info: 200 98% 39%;
+    --info-hover: 200 98% 29%;
+    --info-press: 200 98% 19%;
+    --info-foreground: 0 0% 100%;
+
+    --neutral: 220 14% 96%;
+    --neutral-hover: 220 14% 90%;
+    --neutral-press: 220 14% 80%;
+    --neutral-foreground: 220 14% 20%;
+
+    --surface: 0 0% 100%;
+    --surface-hover: 0 0% 98%;
+    --surface-press: 0 0% 95%;
+    --surface-foreground: 220 14% 20%;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -71,6 +102,37 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Brand color */
+    --success: 142 71% 65%;
+    --success-hover: 142 71% 75%;
+    --success-press: 142 71% 55%;
+    --success-foreground: 0 0% 0%;
+
+    --warning: 43 96% 66%;
+    --warning-hover: 43 96% 76%;
+    --warning-press: 43 96% 56%;
+    --warning-foreground: 0 0% 0%;
+
+    --danger: 0 84% 70%;
+    --danger-hover: 0 84% 80%;
+    --danger-press: 0 84% 60%;
+    --danger-foreground: 0 0% 0%;
+
+    --info: 200 98% 49%;
+    --info-hover: 200 98% 59%;
+    --info-press: 200 98% 39%;
+    --info-foreground: 0 0% 0%;
+
+    --neutral: 220 14% 18%;
+    --neutral-hover: 220 14% 25%;
+    --neutral-press: 220 14% 30%;
+    --neutral-foreground: 0 0% 100%;
+
+    --surface: 220 14% 10%;
+    --surface-hover: 220 14% 15%;
+    --surface-press: 220 14% 20%;
+    --surface-foreground: 0 0% 100%;
   }
 }
 

@@ -24,6 +24,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { APP_CONFIG } from "@/config/app";
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -277,21 +278,25 @@ const SidebarTrigger = React.forwardRef<
   const isMobile = useMobile();
 
   return (
-    <Button
-      ref={ref}
-      data-sidebar="trigger"
-      variant="ghost"
-      size="icon"
-      className={cn("h-7 w-7", className)}
-      onClick={(event) => {
-        onClick?.(event);
-        toggleSidebar();
-      }}
-      {...props}
-    >
-      {isMobile ? <Menu /> : <PanelLeft />}
-      <span className="sr-only">Toggle Sidebar</span>
-    </Button>
+    <div className="flex gap-2 items-center">
+      <Button
+        ref={ref}
+        data-sidebar="trigger"
+        variant="ghost"
+        size="icon"
+        className={cn("h-7 w-7", className)}
+        onClick={(event) => {
+          onClick?.(event);
+          toggleSidebar();
+        }}
+        {...props}
+      >
+        {isMobile ? <Menu /> : <PanelLeft />}
+        <span className="sr-only">Toggle Sidebar</span>
+      </Button>
+
+      <span>{APP_CONFIG.dashboardName}</span>
+    </div>
   );
 });
 SidebarTrigger.displayName = "SidebarTrigger";

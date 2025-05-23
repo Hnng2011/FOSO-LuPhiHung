@@ -3,7 +3,13 @@ const routePath = {
     main: "/dashboard/main",
     suppliers: "/dashboard/suppliers",
     events: "/dashboard/events",
-    setting: "/dashboard/setting",
+    setting: {
+      main: "/dashboard/setting",
+      profile: {
+        main: "/dashboard/setting/profile",
+        edit: "/dashboard/setting/profile/edit",
+      },
+    },
   },
 };
 
