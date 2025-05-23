@@ -2,6 +2,11 @@ import { Home, Calendar, Box, Settings } from "lucide-react";
 import routePath from "./router-path";
 
 export const APP_CONFIG = {
+  meta: {
+    title: "KasraDash",
+    description: "KasraDash Test",
+  },
+
   //Name of dashboard
   dashboardName: "KasraDash",
 
