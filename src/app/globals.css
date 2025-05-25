@@ -39,35 +39,9 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* Brand color */
-    --success: 142 71% 45%;
-    --success-hover: 142 71% 35%;
-    --success-press: 142 71% 25%;
-    --success-foreground: 0 0% 100%;
-
-    --warning: 43 96% 56%;
-    --warning-hover: 43 96% 46%;
-    --warning-press: 43 96% 36%;
-    --warning-foreground: 0 0% 0%;
-
-    --danger: 0 84% 60%;
-    --danger-hover: 0 84% 50%;
-    --danger-press: 0 84% 40%;
-    --danger-foreground: 0 0% 100%;
-
-    --info: 200 98% 39%;
-    --info-hover: 200 98% 29%;
-    --info-press: 200 98% 19%;
-    --info-foreground: 0 0% 100%;
-
-    --neutral: 220 14% 96%;
-    --neutral-hover: 220 14% 90%;
-    --neutral-press: 220 14% 80%;
-    --neutral-foreground: 220 14% 20%;
-
-    --surface: 0 0% 100%;
-    --surface-hover: 0 0% 98%;
-    --surface-press: 0 0% 95%;
-    --surface-foreground: 220 14% 20%;
+    --yellow-primary: 44 95% 64%;
+    --brand-500: 212, 98%, 48%;
+    --hover-brand-500: 212, 98%, 48%, 0.7;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -179,4 +153,9 @@
     @apply text-sm font-semibold leading-relaxed uppercase;
     @apply md:text-base lg:text-lg;
   }
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
