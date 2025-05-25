@@ -80,11 +80,33 @@ const config: Config = {
         //Custom color
         "yellow-primary": {
           DEFAULT: "hsl(var(--yellow-primary))",
-          hover: "hsl(var(--yellow-primary) , 0.7)",
+        },
+        "brand-50": {
+          DEFAULT: "hsl(var(--brand-50))",
+        },
+        "brand-100": {
+          DEFAULT: "hsl(var(--brand-100))",
         },
         "brand-500": {
           DEFAULT: "hsl(var(--brand-500))",
-          hover: "hsl(var(--hover-brand-500)",
+        },
+        "brand-500-hover": {
+          DEFAULT: "hsl(var(--hover-brand-500))",
+        },
+        "brand-600": {
+          DEFAULT: "hsl(var(--brand-600))",
+        },
+        "brand-600-hover": {
+          DEFAULT: "hsl(var(--hover-brand-600))",
+        },
+        "brand-700": {
+          DEFAULT: "hsl(var(--brand-700))",
+        },
+        "brand-700-hover": {
+          DEFAULT: "hsl(var(--hover-brand-700))",
+        },
+        "grey-200": {
+          DEFAULT: "hsl(var(--grey-200))",
         },
       },
     },

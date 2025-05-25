@@ -1,6 +1,6 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "../button";
-import { Icon } from "@iconify/react";
+import Icon from "../icon";
 
 export default function Search() {
   return (

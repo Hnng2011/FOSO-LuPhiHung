@@ -40,8 +40,18 @@
 
     /* Brand color */
     --yellow-primary: 44 95% 64%;
+
+    --brand-50: 214, 100%, 95%;
+    --brand-100: 212, 96%, 90%;
     --brand-500: 212, 98%, 48%;
-    --hover-brand-500: 212, 98%, 48%, 0.7;
+    --brand-600: 212, 98%, 40%;
+    --brand-700: 212, 97%, 30%;
+
+    --hover-brand-500: 212, 98%, 48%, 0.9;
+    --hover-brand-600: 212, 98%, 40%, 0.9;
+    --hover-brand-700: 212, 97%, 30%, 0.9;
+
+    --grey-200: 210 22% 96%;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -118,40 +128,8 @@
     @apply bg-background text-foreground;
   }
 
-  /* Primary Heading (H1) */
-  .h1 {
-    @apply text-2xl font-bold leading-tight;
-    @apply md:text-3xl lg:text-4xl;
-  }
-
-  /* Secondary Heading (H2) */
-  .h2 {
-    @apply text-xl font-semibold leading-snug;
-    @apply md:text-2xl lg:text-3xl;
-  }
-
-  /* Tertiary Heading (H3) */
-  .h3 {
-    @apply text-lg font-medium leading-normal;
-    @apply md:text-lg lg:text-xl;
-  }
-
-  /* Body Text */
-  .body {
-    @apply text-base font-normal leading-normal;
-    @apply md:text-lg lg:text-xl;
-  }
-
-  /* Small Text (S1) */
-  .s1 {
-    @apply text-sm font-normal leading-relaxed;
-    @apply md:text-base lg:text-lg;
-  }
-
-  /* Small Highlighted Text (S2) */
-  .s2 {
-    @apply text-sm font-semibold leading-relaxed uppercase;
-    @apply md:text-base lg:text-lg;
+  .b2 {
+    @apply font-medium text-sm leading-[22px] tracking-normal;
   }
 }
 

@@ -1,8 +1,9 @@
 import * as React from "react";
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { cva } from "class-variance-authority";
-import { Icon } from "@iconify/react";
+
 import { cn } from "@/lib/utils";
+import Icon from "../layouts/icon";
 
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
@@ -52,10 +53,12 @@ const NavigationMenuTrigger = React.forwardRef<
     className={cn(navigationMenuTriggerStyle(), "group", className)}
     {...props}
   >
-    {children}{" "}
+    {children}
     <Icon
-      icon="line-md:chevron-down"
-      className="relative top-[1px] ml-1 h-3 w-3 transition duration-300 group-data-[state=open]:rotate-180"
+      width={12}
+      height={12}
+      icon="tabler:chevron-down"
+      className="relative top-[1px] ml-1 transition duration-300 group-data-[state=open]:rotate-180"
       aria-hidden="true"
     />
   </NavigationMenuPrimitive.Trigger>
